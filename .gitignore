@@ -1,0 +1,11 @@
+### IntelliJ IDEA ###
+out/
+!**/src/main/**/out/
+!**/src/test/**/out/
+/.idea/*
+/AutomationTesting.iml
+
+### Mac OS ###
+.DS_Store
+\.idea\*
+\AutomationTesting.iml
