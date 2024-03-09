@@ -20,6 +20,7 @@ public class H9_PurchaseDiscount {
         double orderPrice = unitPrice * orderQuantity;
         double orderRevenue = 0;
         double orderDiscount = 0;
+        String orderDiscountPercentage = "(0%)";
 
         if (unitPrice <= 0 || orderQuantity <= 0) {
             System.out.println("Unit price and ordered quantity should be a positive number");
@@ -29,12 +30,14 @@ public class H9_PurchaseDiscount {
             orderDiscountRate = 0.85;
             orderRevenue = orderPrice * orderDiscountRate;
             orderDiscount = orderPrice * 0.15;
+            orderDiscountPercentage = "(15%)";
         } else {
             orderDiscountRate = 0.80;
             orderRevenue = orderPrice * orderDiscountRate;
             orderDiscount = orderPrice * 0.20;
+            orderDiscountPercentage = "(20%)";
         }
-        System.out.println("The revenue from sale: " + orderRevenue);
-        System.out.println("Discount: " + orderDiscount);
+        System.out.println("The revenue from sale: " + orderRevenue + "$");
+        System.out.println("Discount: " + orderDiscount + "$" + orderDiscountPercentage);
     }
 }
