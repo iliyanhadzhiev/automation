@@ -60,7 +60,7 @@ public class Person {
         return LocalDate.of(year, month, day);
     }
 
-    private String validateEGN(String eng) {
+    private String validateEGN(String egn) {
         if (egn.length() == 10 && containsOnlyDigits(egn)) {
             return egn;
         } else {
@@ -97,5 +97,19 @@ public class Person {
         }
     }
 
-
+    @Override
+    public String toString() {
+        return "Person{" +
+                "name='" + name + '\'' +
+                ", sex=" + sex +
+                ", religion='" + religion + '\'' +
+                ", language='" + language + '\'' +
+                ", job='" + job + '\'' +
+                ", nationality='" + nationality + '\'' +
+                ", egn='" + egn + '\'' +
+                ", dateOfBirth=" + dateOfBirth +
+                ", age=" + age +
+                ", country='" + country + '\'' +
+                '}';
+    }
 }

@@ -14,4 +14,6 @@ public class Bulgarian extends Person {
     public void danceHoro() {
         System.out.println("Танцувам хоро!");
     }
+
+
 }

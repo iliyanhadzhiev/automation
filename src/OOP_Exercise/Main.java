@@ -4,6 +4,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-
+        Bulgarian newBG = new Bulgarian("i1", 'm', "none", "QA", "8601192020", "Bulgaria");
+        System.out.println(newBG);
     }
 }
