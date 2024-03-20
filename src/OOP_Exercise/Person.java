@@ -4,7 +4,7 @@ import java.time.LocalDate;
 
 public class Person {
     private String name;
-//    private String sex;
+    //    private String sex;
     private char sex;
     private String religion;
     private String language;
@@ -21,7 +21,7 @@ public class Person {
 
     public Person(String name, char sex, String religion, String language, String job, String nationality, String egn, String country) {
         this.name = name;
-        this.sex = sex;
+        this.sex = validateSex(sex);
         this.religion = religion;
         this.language = language;
         this.job = job;
@@ -30,6 +30,14 @@ public class Person {
         this.country = country;
         this.dateOfBirth = getDateOfBirth(egn);
         this.age = getAge(dateOfBirth);
+    }
+
+    private char validateSex(char sex) {
+        if (Character.toLowerCase(sex) == 'm' || Character.toLowerCase(sex) == 'f') {
+            return sex;
+        } else {
+            throw new IllegalArgumentException("The provided sex is not valid! Correct values: M/F");//ToDo: Continue normal execution??
+        }
     }
 
     public void setJob(String job) {
@@ -50,7 +58,7 @@ public class Person {
         int month = Integer.parseInt(egn.substring(2, 4));
         int day = Integer.parseInt(egn.substring(4, 6));
 
-        if(month > 40) {
+        if (month > 40) {
             year = year + 2000;
             month = month - 40;
         } else {
@@ -94,6 +102,17 @@ public class Person {
             System.out.println("I am celebrating Easter");
         } else {
             System.out.println("I am not celebrating Easter");
+        }
+    }
+
+    public boolean isAdult() {
+        switch (nationality.toLowerCase()) {
+            case "bulgaria", "italy":
+                return age >= 18;
+            case "usa":
+                return age >= 21;
+            default:
+                return false;
         }
     }
 
