@@ -116,6 +116,19 @@ public class Person {
         }
     }
 
+    public boolean canTakeLoan() {
+        if (job == null || job.isEmpty()) {
+            return false;
+        } else {
+            switch (job.toLowerCase()) {
+                case "unemployed", "student":
+                    return false;
+                default:
+                    return true;
+            }
+        }
+    }
+
     @Override
     public String toString() {
         return "Person{" +
