@@ -16,4 +16,10 @@ public class Child extends Person {
         System.out.println("Not an adult!");
         return false;
     }
+
+    @Override
+    public boolean canTakeLoan() {
+        System.out.println("A child cannot take a loan!");
+        return false;
+    }
 }
