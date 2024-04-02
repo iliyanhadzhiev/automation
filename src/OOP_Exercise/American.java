@@ -9,4 +9,8 @@ public class American extends Person {
     public void sayHello() {
         System.out.println("Hello!");
     }
+
+    public void eatsBurger() {
+        System.out.println("Love BURGER!!!");
+    }
 }

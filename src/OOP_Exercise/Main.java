@@ -27,6 +27,7 @@ public class Main {
         System.out.println("Can take a loan: " + newAmerican.canTakeLoan());
         newAmerican.celebrateEaster();
         System.out.println("Is adult: " + newAmerican.isAdult());
+        newAmerican.eatsBurger();
         System.out.println();
 
         System.out.println("Bulgarian:");
@@ -42,6 +43,7 @@ public class Main {
         System.out.println("Can take a loan: " + newItalian.canTakeLoan());
         newItalian.celebrateEaster();
         System.out.println("Is adult: " + newItalian.isAdult());
+        newItalian.eatsPasta();
         System.out.println();
 
         System.out.println("Child:");

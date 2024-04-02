@@ -9,4 +9,8 @@ public class Italian extends Person {
     public void sayHello() {
         System.out.println("Ciao!");
     }
+
+    public void eatsPasta() {
+        System.out.println("Italians love pasta!!!");
+    }
 }
